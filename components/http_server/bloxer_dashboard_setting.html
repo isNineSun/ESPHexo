@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="setting" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="bloxer_dashboard.css">
+</head>
+<body>
+    <div class="form-setting-container">
+        <p class="title">Configuration</p>
+        <form class="form" id="setting-form">
+
+            <div class="social-message">
+                <div class="line"></div>
+                <p class="message">Blog File Update</p>
+                <div class="line"></div>
+            </div>
+            <div class="input-group">
+                <label for="repo_type">Repository type</label>
+                <input type="text" name="repo_type" id="repo_type" placeholder="">
+                <label for="repo_owner">Repository owner</label>
+                <input type="text" name="repo_owner" id="repo_owner" placeholder="">
+                <label for="repo_name">Repository name</label>
+                <input type="text" name="repo_name" id="repo_name" placeholder="">
+                <br><br>
+                <button id="uploadButton" class="btn">Update Bolg Files form Server</button>
+            </div>
+
+            <div class="social-message">
+                <div class="line"></div>
+                <p class="message">WIFI Setting</p>
+                <div class="line"></div>
+            </div>
+            <div class="input-group">
+                <label for="wifi_ssid">WIFI ssid</label>
+                <input type="text" name="wifi_ssid" id="wifi_ssid" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="wifi_password">WIFI Password</label>
+                <input type="password" name="wifi_password" id="wifi_password" placeholder="">
+            <div>
+
+            <div class="social-message">
+                <div class="line"></div>
+                <p class="message">DDNS Setting</p>
+                <div class="line"></div>
+            </div>
+            <div class="input-group">
+                <label for="ddns_domain">DDNS Domains</label>
+                <input type="text" name="ddns_domain" id="ddns_domain" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="ddns_token">DDNS Token</label>
+                <input type="text" name="ddns_token" id="ddns_token" placeholder="">
+            <div>
+
+            <div class="social-message">
+                <div class="line"></div>
+                <p class="message">WebUI Setting</p>
+                <div class="line"></div>
+            </div>
+            <div class="input-group">
+                <label for="web_username">WebUI Username</label>
+                <input type="text" name="web_username" id="web_username" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="web_password">WebUI Password</label>
+                <input type="password" name="web_password" id="web_password" placeholder="">
+            </div>
+
+            <div>
+                <br><br>
+            </div>
+            <button id="saveButton" class="btn">Save</button>
+        </form>
+    </div>
+
+    <script src="bloxer_dashboard_setting.js"></script>
+</body>
+</html>

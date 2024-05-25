@@ -1,0 +1,12 @@
+# ESP-IDF build output
+/build/
+*.bin
+*.elf
+*.map
+
+# VSCode settings
+.vscode/
+
+# IDF environment
+*.pyc
+__pycache__/
