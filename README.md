@@ -2,7 +2,7 @@
 | ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/isNineSun/img_repository/main/aako8-4otcw-001.png" height=120>
+  <img src="https://raw.githubusercontent.com/isNineSun/img_repository/main/e057386c0df403c28fb037c34386544a.png" height=120>
 </p>
 
 # ESPHexo--Run Your Hexo Blog on ESP32
