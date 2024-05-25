@@ -7,7 +7,6 @@
 #include "sdmmc_cmd.h"
 #include "esp_vfs_fat.h"
 #include "nvs_flash.h"
-#include "esp_psram.h"
 
 #include "sd_card.h"
 #include "wifi.h"
@@ -28,9 +27,6 @@ void init_global_context(void)
 
 void app_main() 
 {
-    size_t psram_size = esp_psram_get_size();
-    ESP_LOGI(TAG, "PSRAM size: %d bytes\n", psram_size);
-
     ESP_ERROR_CHECK(nvs_flash_init());
 
     ESP_ERROR_CHECK(init_sd_card());
