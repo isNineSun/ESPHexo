@@ -21,9 +21,9 @@
 - [如何使用](#如何使用)
   - [🚀快速开始](#快速开始)
   - [🤓进阶配置](#进阶配置)
-    - [关于DDNS配置](#关于ddns配置)
-    - [关于显示屏幕](#关于显示屏幕)
-    - [完整配置](#完整配置)
+    - [1.关于DDNS配置](#1关于ddns配置)
+    - [2.关于显示屏幕](#2关于显示屏幕)
+    - [3.完整配置](#3完整配置)
   
 
 # 简介
@@ -71,6 +71,7 @@ https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.ht
         "ddns_token":	"Your token",
         "web_username":	"admin",
         "web_password":	"123456",
+        "repo_type": "You Repository Type",
         "repo_owner": "You Repository Username",
         "repo_name": "You Repository Name"
     }
@@ -81,6 +82,7 @@ https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.ht
    - ddns_token：DDNS 服务token，**对于快速启动来说，这一项可以不设置留空**
    - web_username：WebUI配置界面的用户名，**对于快速启动来说，这一项可以不设置留空**
    - web_password：WebUI配置界面的密码，**对于快速启动来说，这一项可以不设置留空**
+   - repo_type: 保存博客文件的仓库的类型（现已支持Github和Gitee），**对于快速启动来说，这一项可以不设置留空**
    - repo_owner：保存博客文件的仓库的拥有者的账户名（比如，部署在github上，那么就是你的github名），**对于快速启动来说，这一项可以不设置留空**
    - repo_name：保存博客文件的仓库名，**对于快速启动来说，这一项可以不设置留空**    
 对于快速启动来说，其配置文件可以类似这样：    
@@ -92,6 +94,7 @@ https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.ht
         "ddns_token":	"",
         "web_username":	"",
         "web_password":	"",
+        "repo_type": "",
         "repo_owner": "",
         "repo_name": ""
     }
@@ -102,16 +105,16 @@ https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.ht
 6. 在浏览器地址栏输入显示屏上的IP地址，如：192.168.31.177，如果一切正常。就可以直接本地访问设备中的Blog网站了。    
 
 ## 🤓进阶配置
-### 关于DDNS配置
+### 1.关于DDNS配置
 首先，需要你的网络环境支持公网IP访问，IPV4(未进行测试)或者IPV6，然后在[Duck DNS](https://www.duckdns.org/domains)上免费申请一个域名，登录选项有很多，直接Github即可，也可以选择自己喜欢的，申请过后，将你的域名和账户的token配置记录下来，在ESPHexo的配置文件中即可。    
 ![](https://raw.githubusercontent.com/isNineSun/img_repository/main/5edce0.png)    
 
-### 关于显示屏幕
+### 2.关于显示屏幕
 显示屏幕是可选的，即使你的硬件上不支持显示屏，对程序运行也不会有影响，如果你想更干净地杜绝显示屏功能，可以关闭代码中的显示屏相关功能的编译宏控，其Makfile文件路径为``/根目录/CMakeLists.txt``：    
 
 ![](https://raw.githubusercontent.com/isNineSun/img_repository/main/1fb5ab5da8a03928e6a642b9e0dcf4ce.png)    
 
-### 完整配置
+### 3.完整配置
 1. 完整配置中包括对Blog文件的**自动拉取，DDNS与WebUI**，首先需要准备好配置文件：
    ```json
     {
@@ -121,6 +124,7 @@ https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.ht
         "ddns_token":	"Your token",
         "web_username":	"admin",
         "web_password":	"123456",
+        "repo_type": "You Repository Type",
         "repo_owner": "You Repository Username",
         "repo_name": "You Repository Name"
     }
